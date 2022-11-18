@@ -1,0 +1,17 @@
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/2305747/pexels-photo-2305747.jpeg?auto=compress&cs=tinysrgb&w=600)">
+  <div><h1>Flats B&B</h1></div>
+  <div><p>Find your dream flat for the night</p></div>
+</div>
+
+<div>
+  <h1>Where do you want to sleep?</h1>
+  <h2>Pick a flat :</h2>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-sm"><%= "#{flat.name} - #{flat.price_per_night}€ per night" %></div>
+    <% end %>
+  </div>
+</div>
