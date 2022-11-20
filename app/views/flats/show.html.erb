@@ -8,4 +8,8 @@
 
 <p><%= "Price per night : #{@flat.price_per_night}€" %></p>
 
-<%= link_to "Edit flat", edit_flat_path(@flat) %>
+<%= link_to "Edit this flat", edit_flat_path(@flat) %>
+
+<%= link_to "Delete this flat and go back to flats list", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+<%= link_to "Back to flats list", flats_path %>

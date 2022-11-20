@@ -13,9 +13,10 @@
     <% @flats.each do |flat| %>
       <div class="col-sm"><%= "#{flat.name} - #{flat.price_per_night}€ per night" %></div>
       <%= link_to "Discover more", flat_path(flat) %>
-      <%= link_to "Edit flat", edit_flat_path(flat) %>
+      <%= link_to "Edit this flat", edit_flat_path(flat) %>
+      <%= link_to "Delete this flat", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     <% end %>
   </div>
-</div>
 
-<%= link_to "Add a flat", new_flat_path %>
+  <%= link_to "Add a flat", new_flat_path(@flat) %>
+</div>
